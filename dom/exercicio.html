@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio</title>
+</head>
+<body>
+  <label>Numero 1</label>
+  <input id="numero1" type="text" />
+
+  <br/>
+  <br/>
+
+  <label>Numero 2</label>
+  <input id="numero2" type="text" />
+  <br/>
+  
+  <button onclick="alert(somar())">Somar</button>
+  <button onclick="alert(subtrair())">Subtrair</button>
+
+  <script>
+    
+    function somar() {
+      let valor1 = new Number(document.getElementById('numero1').value);
+      let valor2 = new Number(document.getElementById('numero2').value);
+      return valor1 + valor2;
+    }
+
+    const subtrair = () => 
+      new Number(document.getElementById('numero1').value) - new Number(document.getElementById('numero2').value);
+    
+
+  </script>
+
+</body>
+</html>

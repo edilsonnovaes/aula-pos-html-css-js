@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+
+  <style>
+    .classe-nova {
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DOM</h1>
+  
+  <p id="paragrafo1">P 1</p>
+  <p name="paragrafo2">P 2</p>
+  <p class="paragrafo3">P 3</p>
+  <p>P 4</p>
+
+  <script type="text/javascript">
+    /*Por ID*/
+    var paragrafo1 = window.document.getElementById('paragrafo1');
+
+    paragrafo1.innerText = "Primeiro parágrafo 1";
+
+    paragrafo1.innerHTML = "<strong>TESTE</strong>";
+
+
+    /*Por name*/
+
+    var paragrafo2 = document.getElementsByName('paragrafo2');
+    
+    paragrafo2[0].innerHTML = "Parágrafo com name";
+
+
+    /*Por class*/
+
+    let paragrafo3 = document.getElementsByClassName('paragrafo3')[0];
+    
+    paragrafo3.innerHTML = "Parágrafo com class";
+
+    /*Por tagname*/
+
+    let paragrafo4 = document.getElementsByTagName('p')[3];
+    
+    paragrafo4.innerHTML = "Parágrafo com tagname";
+    paragrafo4.classList.add("classe-nova");
+
+    /*Por QuerySelector*/
+
+    // let paragrafo1 = document.querySelector('#paragrafo1');
+    // let paragrafo2 = document.querySelector('p[name=paragrafo2]');
+    
+    // paragrafo1.innerHTML = "Parágrafo com queryselector";
+
+    // console.log(paragrafo1);
+  </script>
+
+</body>
+</html>
